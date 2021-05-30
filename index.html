@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- icons > font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/3b1cc6c86a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Chat forum - Finansee</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="heading">
+        <p style="font-size: 30px">Finansee Forum</p>
+        <i
+          class="fas fa-sign-out-alt fa-2x"
+          id="exit"
+          style="cursor: pointer"
+        ></i>
+      </div>
+
+      <div class="container">
+        <!-- Append messages dynamically -->
+      </div>
+      <!-- message input box -->
+      <form action="#" id="message-container">
+        <textarea
+          id="message-input"
+          placeholder="type your message..."
+        ></textarea>
+        <button type="submit" id="message-btn">
+          <i class="fas fa-paper-plane fa-2x"></i>
+        </button>
+      </form>
+    </div>
+
+    <script>
+      document.getElementById("exit").addEventListener("click", (e) => {
+        window.location.reload();
+      });
+    </script>
+
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
